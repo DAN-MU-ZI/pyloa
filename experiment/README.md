@@ -40,7 +40,15 @@
    └─ /gamecontents/calendar
 ```
 
-## api 활용 구조
+## api 활용 구조 예시
 ```
+from riotwatcher import LolWatcher
 
+lol_watcher = LolWatcher('<your-api-key>')
+
+# use v4 explicitly
+matchlist = lol_watcher.lol_status_v4.platform_data('na1')
+
+# use v3 explicitly
+old_matchlist = lol_watcher.lol_status_v3.shard_data('na1')
 ```
